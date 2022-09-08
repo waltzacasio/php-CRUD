@@ -80,9 +80,14 @@
    	 								
    	 								// echo out the contents of each row into a table
 					                echo "<tr>";
-					                echo '<td>' . $row[0] . '</td>';
 					                echo '<td>' . $row[1] . '</td>';
 					                echo '<td>' . $row[2] . '</td>';
+					                echo '<td>' . $row[3] . '</td>';
+									echo '<td>' . $row[4] . '</td>';
+									echo '<td>' . $row[5] . '</td>';
+									echo '<td>' . $row[6] . '</td>';
+									echo '<td>' . $row[7] . '</td>';
+									echo '<td>' . $row[8] . '</td>';
 					                echo '<td><a href="edit.php?id=' . $row[0] . '">Edit</a></td>';
 					                echo '<td><a href="delete.php?id=' . $row[0] . '">Delete</a></td>';
 					                echo "</tr>";
