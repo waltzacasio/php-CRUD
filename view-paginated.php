@@ -207,3 +207,4 @@
                 <a href="records.php">Add New Record</a>
         </body>
 </html>
+
