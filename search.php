@@ -26,7 +26,7 @@ $display_words = "";
 //format each of search keywords into the db query to be run
 $keywords = explode(' ', $k);
 foreach ($keywords as $word) {
-    $search_string .= "lastName LIKE '%" . $word . "%' OR ";
+    $search_string .= "address  LIKE '%" . $word . "%' OR ";
     $display_words .= $word . ' ';
 }
 $search_string = substr($search_string, 0, strlen($search_string)-4);
@@ -46,6 +46,23 @@ echo 'Your search for <i>' . $display_words . '</i><hr/>';
 echo $search_string;
 
 //CONCAT_WS('|',`lastName`,`firstName`,`address`,`boxNumber`,`remark`,`date`,`contact`,`installer`)
+
+
+/*
+//check if the search query returned any results
+if($result_count > 0) {
+
+    //display the header for the display table
+    echo '<table>';
+
+    //loop through each of the results from the database and display them to the user
+    while ($row = mysqli_fetch_assoc($query)) {
+        echo '<tr>
+            <td><h3><a href="' . $row[''
+    }
+}
+*/
+
 ?>
 
 
