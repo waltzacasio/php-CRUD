@@ -26,7 +26,7 @@ $display_words = "";
 //format each of search keywords into the db query to be run
 $keywords = explode(' ', $k);
 foreach ($keywords as $word) {
-    $search_string .= "address  LIKE '%" . $word . "%' OR ";
+    $search_string .= "CONCAT_WS(' ',`lastName`,`firstName`,`address`,`boxNumber`,`remark`,`date`,`contact`,`installer`) LIKE '%" . $word . "%' AND ";
     $display_words .= $word . ' ';
 }
 $search_string = substr($search_string, 0, strlen($search_string)-4);
@@ -43,9 +43,9 @@ $result_count = mysqli_num_rows($query);
 echo '<b><u>' . number_format($result_count) . '</u></b> results found';
 echo 'Your search for <i>' . $display_words . '</i><hr/>';
 
-echo $search_string;
+echo $search_string;    
 
-//CONCAT_WS('|',`lastName`,`firstName`,`address`,`boxNumber`,`remark`,`date`,`contact`,`installer`)
+//CONCAT_WS(' ',`lastName`,`firstName`,`address`,`boxNumber`,`remark`,`date`,`contact`,`installer`)
 
 
 /*
