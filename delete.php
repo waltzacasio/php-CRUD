@@ -10,7 +10,7 @@
 		$id = $_GET['id'];
 		
 		// delete record from database
-		if ($stmt = $mysqli->prepare("DELETE FROM players WHERE id = ? LIMIT 1"))
+		if ($stmt = $mysqli->prepare("DELETE FROM gpinoy WHERE id = ? LIMIT 1"))
 		{
 			$stmt->bind_param("i",$id);	
 			$stmt->execute();
@@ -23,12 +23,12 @@
 		$mysqli->close();
 		
 		// redirect user after delete is successful
-		header("Location: view.php");
+		header("Location: search.php");
 	}
 	else
 	// if the 'id' variable isn't set, redirect the user
 	{
-		header("Location: view.php");
+		header("Location: search.php");
 	}
 
 ?>

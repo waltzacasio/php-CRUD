@@ -1,0 +1,47 @@
+[33mcommit c9e98ba7031e00ad56f9950df3b68700e10b097c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: waltzacasio <WaltzAcasio@yahoo.com>
+Date:   Thu Oct 13 18:32:59 2022 +0800
+
+    added working search bar
+
+[33mcommit d8bf5077faafd65f5e892cf634dc524eeda3c399[m
+Author: waltzacasio <WaltzAcasio@yahoo.com>
+Date:   Tue Oct 11 17:37:43 2022 +0800
+
+    Display the Search Engine Results to the User in comment
+
+[33mcommit 7176b5822a11afb731ae0005c54417a61fab84dc[m
+Author: waltzacasio <WaltzAcasio@yahoo.com>
+Date:   Fri Sep 30 08:45:34 2022 +0800
+
+    added search query prototype
+
+[33mcommit 5a89536845567a427ba2feb70b5cec15226134b8[m
+Author: waltzacasio <WaltzAcasio@yahoo.com>
+Date:   Tue Sep 27 13:06:14 2022 +0800
+
+    just testing
+
+[33mcommit 30fcffc4158817777cbcf25a0fdc0f41326d9f0e[m
+Author: waltzacasio <WaltzAcasio@yahoo.com>
+Date:   Mon Sep 12 17:32:14 2022 +0800
+
+    added paginated page range
+
+[33mcommit 70441ab2dba080270ac8b703aa619c3dcdcc92d7[m
+Author: waltzacasio <WaltzAcasio@yahoo.com>
+Date:   Thu Sep 8 20:00:34 2022 +0800
+
+    edited headers on view-paginated
+
+[33mcommit 58e69b986b149985f1f1c88c1e63d0c2557e8960[m
+Author: waltzacasio <84702123+waltzacasio@users.noreply.github.com>
+Date:   Wed Sep 7 22:32:32 2022 +0800
+
+    Delete readme.txt
+
+[33mcommit 6f8d9c401c45da9adf148e93a080a1411e4a52f7[m
+Author: waltzacasio <WaltzAcasio@yahoo.com>
+Date:   Wed Sep 7 22:26:53 2022 +0800
+
+    first save for laptop access

@@ -17,7 +17,9 @@
 <?php
 // get the search terms from the url
 
-$k = isset($_GET['k']) ? $_GET['k'] : '';
+if ($k = isset($_GET['k']) ? $_GET['k'] : '') 
+
+{
 
 // create the base variables for building the search query
 $search_string = "SELECT * FROM gpinoy WHERE ";
@@ -45,24 +47,42 @@ echo 'Your search for <i>' . $display_words . '</i><hr/>';
 
 echo $search_string;    
 
-//CONCAT_WS(' ',`lastName`,`firstName`,`address`,`boxNumber`,`remark`,`date`,`contact`,`installer`)
+
+if ($result_count > 0) {
+
+    echo "<table border='1' cellpadding='10'>";
+            echo "<tr> <th>Last Name</th><th>First Name</th><th>Address</th><th>Box Number</th><th>Remark</th><th>Date of Purchase</th><th>Contact</th><th>Installer</th><th></th><th></th> </tr>";
+
+            while ($row = mysqli_fetch_assoc($query)){
 
 
-/*
-//check if the search query returned any results
-if($result_count > 0) {
 
-    //display the header for the display table
-    echo '<table>';
+                    
+                    // echo out the contents of each row into a table
+                echo "<tr>";
+                echo '<td>' . $row['lastName'] . '</td>';
+                echo '<td>' . $row['firstName'] . '</td>';
+                echo '<td>' . $row['address'] . '</td>';
+                echo '<td>' . $row['boxNumber'] . '</td>';
+                echo '<td>' . $row['remark'] . '</td>';
+                echo '<td>' . $row['date'] . '</td>';
+                echo '<td>' . $row['contact'] . '</td>';
+                echo '<td>' . $row['installer'] . '</td>';
+                echo '<td><a href="edit.php?id=' . $row['id'] . '">Edit</a></td>';
+                echo '<td><a href="delete.php?id=' . $row['id'] . '">Delete</a></td>';
+                echo "</tr>";
+            }
 
-    //loop through each of the results from the database and display them to the user
-    while ($row = mysqli_fetch_assoc($query)) {
-        echo '<tr>
-            <td><h3><a href="' . $row[''
+
+            // close table>
+            echo "</table>";
+
+        } else {
+            'There were no results for your search. Try searching for something else.';
+        }
+
     }
-}
-*/
-
+        
 ?>
 
 
